@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ainformatico/mailinator.svg)](https://travis-ci.org/ainformatico/mailinator)
+
 # Mailinator
 
 Mailinator REST API wrapper, http://mailinator.com/apidocs.jsp

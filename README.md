@@ -69,13 +69,13 @@ This returns a list of the emails for the given _inbox_, but not the emails them
 To download an `Email` you need:
 
 ```ruby
-email = inbox.first.download
+email = inbox.messages.first.download
 ```
 
 or
 
 ```ruby
-inbox.first.download do |email|
+inbox.messages.first.download do |email|
   [...]
 end
 ```

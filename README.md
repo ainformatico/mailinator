@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ainformatico/mailinator.svg)](https://travis-ci.org/ainformatico/mailinator)
+[![Code Climate](https://codeclimate.com/github/ainformatico/mailinator/badges/gpa.svg)](https://codeclimate.com/github/ainformatico/mailinator)
 
 # Mailinator
 

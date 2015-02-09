@@ -26,4 +26,11 @@ describe Mailinator::Email do
     expect(message.forwards_left).to eq(10)
     expect(message.original).to be_a(Hash)
   end
+
+  it 'should return nil for #body_html when no html body' do
+    body = 'This is a body'
+    message = Mailinator::Email.get('abcd1234plain')
+    expect(message.body).to eq(body)
+    expect(message.body_html).to_not be
+  end
 end

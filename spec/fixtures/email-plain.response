@@ -1,0 +1,5 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Date: Sun, 28 Dec 2014 13:39:51 GMT
+
+{"apiInboxFetchesLeft":696,"apiEmailFetchesLeft":10,"data":{"headers":{"sender":"example@example.net","content-type":"multipart\/alternative;\r\n\tboundary=\"MIMEBoundaryec1dc8828d9bbedf095f9e9d2ebdbdeb\"","to":"recipient@mailinator.com","x-connecting-ip":"127.0.0.1","subject":"This is a subject","mime-version":"1.0","x-received-time":"1419696967076","reply-to":"example@example.net","received":"from 127-0-0-1.dynamic-ip.example.net ()\r\n        by mail.mailinator.com with SMTP (Postfix)\r\n        for recipient@mailinator.com;\r\n        Sat, 27 Dec 2014 16:16:07 +0000 (UTC)","from":"\"Sender\" <example@example.net>","date":"Sun, 28 Dec 2014 00:16:00 +0800"},"seconds_ago":77024,"id":"1419696967-44152505-recipient","to":"recipient@mailinator.com","time":1419696967076,"subject":"This is a subject","fromfull":"example@example.net","parts":[{"headers":{"content-type":"text\/plain;\r\n\tcharset=\"iso-8859-1\"","content-transfer-encoding":"quoted-printable"},"body":"This is a body"}],"been_read":false,"from":"Sender","ip":"127.0.0.1"},"forwardsLeft":10}

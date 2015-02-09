@@ -7,7 +7,7 @@ module Mailinator
         {
           id: @data['data']['id'],
           body: @data['data']['parts'].first['body'],
-          body_html: @data['data']['parts'][1]['body'],
+          body_html: retrieve_body_html,
           inbox_fetches_left: @data['apiInboxFetchesLeft'],
           email_fetches_left: @data['apiEmailFetchesLeft'],
           forwards_left: @data['forwardsLeft'],
@@ -21,6 +21,13 @@ module Mailinator
           received: @data['data']['headers']['received'],
           read?: @data['data']['been_read']
         }
+      end
+
+      private
+
+      def retrieve_body_html
+        html = @data['data']['parts'][1] || {}
+        html['body']
       end
     end
   end

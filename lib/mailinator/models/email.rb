@@ -6,6 +6,7 @@ module Mailinator
       def transform_data
         {
           id: @data['data']['id'],
+          subject: @data['data']['subject'],
           body: @data['data']['parts'].first['body'],
           body_html: retrieve_body_html,
           inbox_fetches_left: @data['apiInboxFetchesLeft'],

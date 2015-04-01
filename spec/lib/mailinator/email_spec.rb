@@ -11,6 +11,7 @@ describe Mailinator::Email do
     body = 'This is a body'
     message = Mailinator::Email.get('abcd1234')
     expect(message.id).to eq('1419696967-44152505-recipient')
+    expect(message.subject).to eq('This is a subject')
     expect(message.body).to eq(body)
     expect(message.body_html).to include("<p>#{body}</p>")
     expect(message.read?).to_not be

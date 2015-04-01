@@ -32,8 +32,8 @@ describe Mailinator::Api do
       .with(url, params)
       .and_call_original
 
-    expect(Net::HTTP)
-      .to receive(:get_response)
+    expect(api)
+      .to receive(:perform_request)
       .with(uri) { response }
 
     api.get(url, params)

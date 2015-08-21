@@ -42,6 +42,7 @@ email = Mailinator::Email.get('email-abcd1234')
 Now you have access to some methods:
 
 * `email.id`
+* `email.subject`
 * `email.body`
 * `email.body_html`
 * `email.read?`

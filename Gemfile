@@ -4,14 +4,15 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
-  gem 'rubocop', '~> 0.28'
-  gem 'rspec', '~> 3.1'
-  gem 'guard', '~> 2.10'
-  gem 'guard-rspec', '~> 4.5'
+  gem 'rubocop', '~> 0.40'
+  gem 'rspec', '~> 3.4.0'
+  gem 'guard', '~> 2.14.0'
+  gem 'guard-rspec', '~> 4.7.0'
+  gem 'listen', '~> 2.10.1'
   gem 'fakeweb', '~> 1.3'
 end
 
 group :debug do
-  gem 'pry', '~> 0.10'
-  gem 'pry-byebug', '~> 2.0'
+  gem 'pry', '~> 0.10.3'
+  gem 'pry-byebug', '~> 3.4.0'
 end

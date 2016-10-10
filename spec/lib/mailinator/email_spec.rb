@@ -34,4 +34,11 @@ describe Mailinator::Email do
     expect(message.body).to eq(body)
     expect(message.body_html).to_not be
   end
+
+  describe '#delete' do
+    it 'deletes an email' do
+      response = Mailinator::Email.delete('abcd1234')
+      expect(response).to eq({'status' => 'ok'})
+    end
+  end
 end

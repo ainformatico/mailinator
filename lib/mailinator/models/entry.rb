@@ -9,6 +9,10 @@ module Mailinator
           email
         end
       end
+
+      def delete
+        Mailinator::Email.delete(id)
+      end
     end
   end
 end

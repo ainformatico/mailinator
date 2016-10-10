@@ -81,6 +81,12 @@ inbox.messages.first.download do |email|
 end
 ```
 
+To delete an `Email` you need:
+
+```ruby
+inbox.messages.first.delete
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/ainformatico/mailinator/fork )

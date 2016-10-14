@@ -7,6 +7,11 @@ module Mailinator
         populate(data)
       end
 
+      def delete(id)
+        api = Api.new
+        api.get('delete', msgid: id)
+      end
+
       private
 
       def populate(data)

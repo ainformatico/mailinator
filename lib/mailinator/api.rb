@@ -7,7 +7,7 @@ module Mailinator
     class NotFound < StandardError; end
     class RequestError < StandardError; end
 
-    def get(url, params = {})
+    def get(url, params = {}) 
       response = request(url, params)
       handle_response(response)
     end

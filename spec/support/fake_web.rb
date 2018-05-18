@@ -14,7 +14,7 @@ end
 
 register_uri('https://api.mailinator.com/api/inbox?to=abcd1234&token=ABCD', 'inbox.response')
 register_uri('https://api.mailinator.com/api/email?msgid=abcd1234&token=ABCD', 'email.response')
-register_uri('https://api.mailinator.com/api/email?msgid=abcd1234plain&token=ABCD', 'email-plain_new.response')
+register_uri('https://api.mailinator.com/api/email?msgid=abcd1234plain&token=ABCD', 'email-plain.response')
 register_uri('https://api.mailinator.com/api/email?msgid=1419696967-44152505-recipient&token=ABCD', 'email.response')
 register_uri('https://api.mailinator.com/api/not-found?token=ABCD', 'not-found.response')
 register_uri('https://api.mailinator.com/api/error?token=ABCD', 'error.response')

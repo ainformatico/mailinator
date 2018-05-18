@@ -32,6 +32,6 @@ describe Mailinator::Inbox do
   end
 
   it 'should #delete a private domain email' do
-    expect(inbox_private.messages.first.delete).to eq({'status' => 'ok'})
+    expect(inbox_private.messages.first.delete).to eq('status' => 'ok')
   end
 end

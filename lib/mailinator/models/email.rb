@@ -17,7 +17,7 @@ module Mailinator
           orig_from: @data['data']['origfrom'],
           id: @data['data']['id'],
           time: @data['data']['time'],
-          seconds_ago: @data['data']['seconds_ago'],
+          seconds_ago: @data['data']['seconds_ago']
         }
       end
     end

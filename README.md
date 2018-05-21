@@ -95,6 +95,8 @@ Access to a private inbox
 inbox = Mailinator::Inbox.get('inbox-abcd1234', private_domain: true)
 ```
 
+The 'download' and 'delete' work the same with private domain.
+
 ## Contributing
 
 1. Fork it ( https://github.com/ainformatico/mailinator/fork )

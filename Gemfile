@@ -4,12 +4,12 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
-  gem 'rubocop', '~> 0.41.2'
-  gem 'rspec', '~> 3.4.0'
+  gem 'fakeweb', '~> 1.3'
   gem 'guard', '~> 2.14.0'
   gem 'guard-rspec', '~> 4.7.0'
   gem 'listen', '~> 2.10.1'
-  gem 'fakeweb', '~> 1.3'
+  gem 'rspec', '~> 3.4.0'
+  gem 'rubocop', '~> 0.41.2'
 end
 
 group :debug do

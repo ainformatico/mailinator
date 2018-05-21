@@ -5,7 +5,7 @@ module Mailinator
     attr_accessor :token
 
     def token
-      fail TokenError, 'Please provide a token' if @token.nil?
+      raise TokenError, 'Please provide a token' if @token.nil?
       @token
     end
   end

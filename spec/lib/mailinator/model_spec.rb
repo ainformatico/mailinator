@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe Mailinator::Models::Base do
-
-  let(:data) { {custom: :custom} }
+  let(:data) { { custom: :custom } }
 
   it 'should #transform_data with defaults' do
     class CustomModel < Mailinator::Models::Base; end

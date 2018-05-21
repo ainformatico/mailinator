@@ -13,11 +13,11 @@ jobs:
 
     steps:
       - checkout
+      - ls -al
 
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - ls -al 
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-

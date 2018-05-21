@@ -13,7 +13,7 @@ module Mailinator
           subject: @data['data']['subject'],
           request_id: @data['data']['requestId'],
           body: @data['data']['parts'].first['body'],
-          base_64: @data['data']['parts'].last['body'],
+          body_base_64: @data['data']['parts'].last['body'],
           orig_from: @data['data']['origfrom'],
           id: @data['data']['id'],
           time: @data['data']['time'],

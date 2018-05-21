@@ -17,7 +17,7 @@ describe Mailinator::Email do
     expect(message.subject).to eq('This is a Subject')
     expect(message.request_id).to eq('638363')
     expect(message.body).to include('<p>This is a body</p>')
-    expect(message.base_64).to include('This is a BASE64 body JVBERi0xLjUKJe')
+    expect(message.body_base_64).to include('This is a BASE64 body JVBERi0xLjUKJe')
     expect(message.orig_from).to eq('Sender <sender@example.com>')
     expect(message.id).to eq('1419696967-44152505-recipient')
     expect(message.time).to eq(1_526_072_140_000)

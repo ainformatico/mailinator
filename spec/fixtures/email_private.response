@@ -1,6 +1,6 @@
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Date: Fri, 11 May 2018 13:39:51 GMT
+Date: Mon, 4 14 2018 12:26:18 GMT
 
 {
 	"data": {
@@ -18,7 +18,7 @@ Date: Fri, 11 May 2018 13:39:51 GMT
 				"from mail-1.example.com (smtp.example.com [9.9.9.9]) by mail-prod-2.example.com (Postfix) with ESMTP id 3BB0E1FF38 for <receipient@example.com>; Fri, 11 May 2018 16:55:39 -0400 (EDT)",
 				"from app-4.example.net (app-4.example.net [9.9.9.9]) by mail.example.com (Postfix) with ESMTP id 3946F20A83 for <receipient@example.com>; Fri, 11 May 2018 16:55:39 -0400 (EDT)",
 				"from app-4.example.net (localhost [127.0.0.1]) by app-4.example.net (Postfix) with ESMTP id 3481E413E1 for <receipient@example.com>; Fri, 11 May 2018 14:55:39 -0600 (MDT)"
-			],
+      ],
 			"from": "Sender <sender@example.com>",
 			"content-type": "multipart/mixed; boundary=\"-- -- = _part_124646_371774408 .1526072139209 \"",
 			"to": "<recipient@mailinator.com>",
@@ -28,21 +28,21 @@ Date: Fri, 11 May 2018 13:39:51 GMT
 		"requestId": "638363",
 		"parts": [{
 			"headers": {
-				"content-transfer-encoding": "quoted-printable",
+				"content-transfer-encoding": "7bit",
 				"content-type": "text/html; charset=\"utf-8\""
 			},
 			"body": "<p>This is a body</p>"
-			}, {
-				"headers": {
-					"content-transfer-encoding": "base64",
-					"content-disposition": "attachment; filename=some.pdf",
-					"content-type": "text\/html;\r\n\tcharset=\"iso-8859-1\""
-				},
-				"body": "This is a BASE64 body JVBERi0xLjUKJeLjz9MKMSAwIG9iag08PC9UeXBlL1BhZ2UvUGFyZW50IDYgMCBSIC9NZWRpYUJv"
+		}, {
+			"headers": {
+				"content-transfer-encoding": "base64",
+				"content-disposition": "attachment; filename=some.pdf",
+				"content-type": "text\/html;\r\n\tcharset=\"iso-8859-1\""
+			},
+			"body": "This is a BASE64 body JVBERi0xLjUKJeLjz9MKMSAwIG9iag08PC9UeXBlL1BhZ2UvUGFyZW50IDYgMCBSIC9NZWRpYUJv"
 		}],
 		"from": "Sender",
 		"origfrom": "Sender <sender@example.com>",
-		"to": "Recipient",
+		"to": "recipient",
 		"id": "1419696967-44152505-recipient",
 		"time": 1526072140000,
 		"seconds_ago": 15258

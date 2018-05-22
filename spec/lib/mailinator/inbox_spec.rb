@@ -23,4 +23,8 @@ describe Mailinator::Inbox do
       expect(message).to eq(Mailinator::Email.get(inbox.messages.first.id))
     end
   end
+
+  it 'should #delete an email' do
+    expect(inbox.messages.first.delete).to eq('status' => 'ok')
+  end
 end

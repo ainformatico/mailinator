@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
+  gem 'coveralls', require: false
   gem 'fakeweb', '~> 1.3.0'
   gem 'guard', '~> 2.14.2'
   gem 'guard-rspec', '~> 4.7.3'

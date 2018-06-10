@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Mailinator::Api do
@@ -21,11 +23,11 @@ describe Mailinator::Api do
 
   it 'should GET' do
     api = Mailinator::Api.new
-    params = {custom: :custom, token: token}
+    params = { custom: :custom, token: token }
     url = 'url'
     uri = URI("#{api.send(:base_url)}/#{url}")
     uri.query = URI.encode_www_form(params.merge(params))
-    response = double(:response, {code: '200', body: {id: 1}.to_json})
+    response = double(:response, code: '200', body: { id: 1 }.to_json)
 
     expect(api)
       .to receive(:get)
@@ -34,7 +36,7 @@ describe Mailinator::Api do
 
     expect(api)
       .to receive(:perform_request)
-      .with(uri) { response }
+        .with(uri) { response }
 
     api.get(url, params)
   end

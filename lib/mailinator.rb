@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'mailinator/model'
 require 'mailinator/models/email'
 require 'mailinator/models/entry'

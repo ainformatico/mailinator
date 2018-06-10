@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Mailinator::Inbox do
@@ -25,6 +27,6 @@ describe Mailinator::Inbox do
   end
 
   it 'should #delete an email' do
-    expect(inbox.messages.first.delete).to eq({'status' => 'ok'})
+    expect(inbox.messages.first.delete).to eq('status' => 'ok')
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Mailinator::Email do
@@ -23,7 +25,7 @@ describe Mailinator::Email do
     expect(message.ip).to eq('127.0.0.1')
     expect(message.received).to match(a_string_matching('from 127-0-0-1.dynamic-ip.example.net'))
     expect(message.date).to be_a(DateTime)
-    expect(message.time).to eq(1419696967076)
+    expect(message.time).to eq(1_419_696_967_076)
     expect(message.forwards_left).to eq(10)
     expect(message.original).to be_a(Hash)
   end
@@ -38,7 +40,7 @@ describe Mailinator::Email do
   describe '#delete' do
     it 'deletes an email' do
       response = Mailinator::Email.delete('abcd1234')
-      expect(response).to eq({'status' => 'ok'})
+      expect(response).to eq('status' => 'ok')
     end
   end
 end

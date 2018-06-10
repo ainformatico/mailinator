@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'mailinator'
 
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }

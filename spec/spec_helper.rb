@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 require 'mailinator'
+require 'coveralls'
+
+Coveralls.wear!
 
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 

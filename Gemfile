@@ -14,5 +14,5 @@ end
 
 group :debug do
   gem 'pry', '~> 0.10.3'
-  gem 'pry-byebug', '~> 3.4.0'
+  gem 'pry-byebug', '~> 3.6.0'
 end

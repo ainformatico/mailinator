@@ -3,20 +3,29 @@
 require 'spec_helper'
 
 describe Mailinator do
+  subject { described_class }
+
   describe 'configuration' do
     let(:token) { 'ABCD' }
 
-    it 'should configure the token' do
-      Mailinator.configure do |config|
-        config.token = token
+    context 'when using a block' do
+      before do
+        subject.configure do |config|
+          config.token = token
+        end
       end
 
-      expect(Mailinator.config.token).to eq token
+      it 'configures the token' do
+        expect(subject.config.token).to eq token
+      end
     end
 
-    it 'should configure the token, short version' do
-      Mailinator.config.token = token
-      expect(Mailinator.config.token).to eq token
+    context 'when using the short version' do
+      before { subject.config.token = token }
+
+      it 'should configure the token, short version' do
+        expect(subject.config.token).to eq token
+      end
     end
   end
 end

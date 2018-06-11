@@ -3,8 +3,6 @@
 require 'spec_helper'
 
 describe Mailinator::Api do
-  subject { described_class.new }
-
   let(:token) { 'ABCD' }
 
   before do

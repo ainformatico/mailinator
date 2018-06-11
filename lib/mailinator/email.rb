@@ -6,11 +6,13 @@ module Mailinator
       def get(id)
         api = Api.new
         data = api.get('email', msgid: id)
+
         populate(data)
       end
 
       def delete(id)
         api = Api.new
+
         api.get('delete', msgid: id)
       end
 

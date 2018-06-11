@@ -7,6 +7,7 @@ module Mailinator
     class Base < Hashie::Mash
       def initialize(data)
         @data = data
+
         super(transform_data)
       end
 

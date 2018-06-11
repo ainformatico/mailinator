@@ -7,6 +7,7 @@ module Mailinator
         api = Api.new
         params = opts.merge(to: to)
         data = api.get('inbox', params)
+
         populate(data)
       end
 

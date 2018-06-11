@@ -8,6 +8,7 @@ module Mailinator
 
     def token
       raise TokenError, 'Please provide a token' if @token.nil?
+
       @token
     end
   end

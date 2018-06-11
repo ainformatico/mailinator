@@ -3,14 +3,21 @@
 require 'spec_helper'
 
 describe Mailinator::Config do
-  it 'should assign the token propery' do
-    token = 'ABCD'
-    config = subject
-    config.token = token
-    expect(config.token).to eq(token)
+  before { subject.token = token }
+
+  context 'when success' do
+    let(:token) { 'ABCD' }
+
+    it 'assigns the token properly' do
+      expect(subject.token).to eq(token)
+    end
   end
 
-  it 'should raise an error if no token specified' do
-    expect { subject.token }.to raise_error(Mailinator::TokenError)
+  context 'when failure' do
+    let(:token) { nil }
+
+    it 'raises an error if no token is specified' do
+      expect { subject.token }.to raise_error(Mailinator::TokenError)
+    end
   end
 end

@@ -6,6 +6,7 @@ module Mailinator
       def get(to)
         api = Api.new
         data = api.get('inbox', to: to)
+
         populate(data)
       end
 

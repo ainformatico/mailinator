@@ -3,6 +3,8 @@
 require 'spec_helper'
 
 describe Mailinator::Api do
+  subject { described_class.new }
+
   let(:token) { 'ABCD' }
 
   before do
@@ -11,33 +13,39 @@ describe Mailinator::Api do
     end
   end
 
-  it 'should raise when document not found' do
-    api = Mailinator::Api.new
-    expect { api.get('not-found') }.to raise_error(Mailinator::Api::NotFound)
+  context 'when success' do
+    let(:params) { { custom: :custom, token: token } }
+    let(:url) { 'url' }
+    let(:response) { double(:response, code: '200', body: { id: 1 }.to_json) }
+
+    let(:uri) do
+      uri = URI("#{subject.send(:base_url)}/#{url}")
+      uri.query = URI.encode_www_form(params.merge(params))
+
+      uri
+    end
+
+    before do
+      expect(subject)
+        .to receive(:perform_request)
+        .with(uri)
+        .and_return(response)
+    end
+
+    it 'GET' do
+      subject.get(url, params)
+    end
   end
 
-  it 'should raise when an error occurred' do
-    api = Mailinator::Api.new
-    expect { api.get('error') }.to raise_error(Mailinator::Api::RequestError)
-  end
+  context 'when failure' do
+    it 'raises error when the document is not found' do
+      expect { subject.get('not-found') }
+        .to raise_error(described_class::NotFound)
+    end
 
-  it 'should GET' do
-    api = Mailinator::Api.new
-    params = { custom: :custom, token: token }
-    url = 'url'
-    uri = URI("#{api.send(:base_url)}/#{url}")
-    uri.query = URI.encode_www_form(params.merge(params))
-    response = double(:response, code: '200', body: { id: 1 }.to_json)
-
-    expect(api)
-      .to receive(:get)
-      .with(url, params)
-      .and_call_original
-
-    expect(api)
-      .to receive(:perform_request)
-        .with(uri) { response }
-
-    api.get(url, params)
+    it 'raises error when an error occurred' do
+      expect { subject.get('error') }
+        .to raise_error(described_class::RequestError)
+    end
   end
 end

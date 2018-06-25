@@ -2,6 +2,7 @@ require 'net/http'
 require 'json'
 
 module Mailinator
+
   class Api
     class NotFound < StandardError; end
     class RequestError < StandardError; end
@@ -34,7 +35,7 @@ module Mailinator
     end
 
     def generate_params(params)
-      URI.encode_www_form(params.merge(token: token))
+      URI.encode_www_form(params.merge({token: token}))
     end
 
     def base_url
@@ -43,12 +44,12 @@ module Mailinator
 
     def handle_response(response)
       case response.code.to_i
-      when 200
-        JSON.parse(response.body)
-      when 404
-        raise NotFound
-      else
-        raise RequestError, status: response.message, code: response.code
+        when 200
+          JSON.parse(response.body)
+        when 404
+          fail NotFound
+        else
+          fail RequestError, {status: response.message, code: response.code}
       end
     end
   end

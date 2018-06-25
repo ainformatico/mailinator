@@ -2,41 +2,4 @@ HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Date: Sun, 28 Dec 2014 13:39:51 GMT
 
-{
-	"data": {
-		"fromfull": "example@example.net",
-		"headers": {
-			"date": "Mon, 14 May 2018 00:47:55 -0600 (MDT)",
-			"mime-version": "1.0",
-			"x-virus-scanned": "ClamAV using ClamSMTP",
-			"subject": "This is a Subject",
-			"message-id": "<message.id@example.com>",
-			"received": ["from 127-0-0-1.dynamic-ip.example.net ()\r\n        by mail.mailinator.com with SMTP (Postfix)\r\n        for recipient@mailinator.com;\r\n        Sat, 27 Dec 2014 16:16:07 +0000 (UTC)"],
-			"from": "\"Sender\" <example@example.net>",
-			"content-type": "multipart/mixed; boundary=\"----=_part_50750_324040880.1526280475585\"",
-			"to": "<recipient@mailinator.com>",
-			"x-mailinator-smtp": ["system: start;0", "s: 220 mail.mailinator.com esmtp postfix;0", "r: ehlo bmta1.somemail.com;102", "s: 250-mail.mailinator.com 250-8bitmime 250 ok;102", "r: mail from:<exampl@example.net>;194", "s: 250 ok;194", "r: rcpt to:<recipient@mailinator.com>;286", "s: 250 ok;286", "r: data;377", "s: 354 end data with <cr><lf>.<cr><lf>;377", "s: 250 ok;6137"]
-		},
-		"subject": "This is a Subject",
-		"parts": [{
-			"headers": {
-				"content-transfer-encoding": "7bit",
-				"content-type": "text/html; charset=\"utf-8\""
-			},
-			"body": "This is a body"
-		}, {
-			"headers": {
-				"content-transfer-encoding": "base64",
-				"content-disposition": "attachment; filename=some.pdf",
-				"content-type": "text\/html;\r\n\tcharset=\"iso-8859-1\""
-			},
-			"body": "This is a BASE64 body"
-		}],
-		"from": "Sender",
-		"origfrom": "Example <example@example.net>",
-		"to": "recipient",
-		"id": "1419696967-44152505-recipient",
-		"time": 1526072140000,
-		"seconds_ago": 55994
-	}
-}
+{"apiInboxFetchesLeft":696,"apiEmailFetchesLeft":10,"data":{"headers":{"sender":"example@example.net","content-type":"multipart\/alternative;\r\n\tboundary=\"MIMEBoundaryec1dc8828d9bbedf095f9e9d2ebdbdeb\"","to":"recipient@mailinator.com","x-connecting-ip":"127.0.0.1","subject":"This is a subject","mime-version":"1.0","x-received-time":"1419696967076","reply-to":"example@example.net","received":"from 127-0-0-1.dynamic-ip.example.net ()\r\n        by mail.mailinator.com with SMTP (Postfix)\r\n        for recipient@mailinator.com;\r\n        Sat, 27 Dec 2014 16:16:07 +0000 (UTC)","from":"\"Sender\" <example@example.net>","date":"Sun, 28 Dec 2014 00:16:00 +0800"},"seconds_ago":77024,"id":"1419696967-44152505-recipient","to":"recipient@mailinator.com","time":1419696967076,"subject":"This is a subject","fromfull":"example@example.net","parts":[{"headers":{"content-type":"text\/plain;\r\n\tcharset=\"iso-8859-1\"","content-transfer-encoding":"quoted-printable"},"body":"This is a body"}],"been_read":false,"from":"Sender","ip":"127.0.0.1"},"forwardsLeft":10}

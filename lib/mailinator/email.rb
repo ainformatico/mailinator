@@ -1,10 +1,9 @@
 module Mailinator
   class Email
     class << self
-      def get(id, opts = {})
+      def get(id)
         api = Api.new
-        params = opts.merge(msgid: id)
-        data = api.get('email', params)
+        data = api.get('email', msgid: id)
         populate(data)
       end
 

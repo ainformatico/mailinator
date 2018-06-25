@@ -1,8 +1,8 @@
 module Mailinator
   module Models
     class Entry < Base
-      def download(opts = {})
-        email = Mailinator::Email.get(id, opts)
+      def download
+        email = Mailinator::Email.get(id)
         if block_given?
           yield email
         else

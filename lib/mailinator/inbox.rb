@@ -1,10 +1,9 @@
 module Mailinator
   class Inbox
     class << self
-      def get(to, opts = {})
+      def get(to)
         api = Api.new
-        params = opts.merge(to: to)
-        data = api.get('inbox', params)
+        data = api.get('inbox', to: to)
         populate(data)
       end
 

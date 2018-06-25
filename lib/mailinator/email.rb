@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mailinator
   class Email
     class << self
@@ -5,11 +7,13 @@ module Mailinator
         api = Api.new
         params = opts.merge(msgid: id)
         data = api.get('email', params)
+
         populate(data)
       end
 
       def delete(id)
         api = Api.new
+
         api.get('delete', msgid: id)
       end
 

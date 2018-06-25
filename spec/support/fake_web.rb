@@ -1,10 +1,11 @@
-require 'fakeweb'
+# frozen_string_literal: true
 
-FakeWeb.allow_net_connect = false
+require 'fakeweb'
 
 def fixture_file(filename)
   return '' if filename == ''
-  file_path = File.join(File.expand_path(File.dirname(__dir__)) + '/support', '../', 'fixtures/', filename)
+  file_path = File.join(__dir__, '../', 'fixtures/', filename)
+  
   File.read(file_path)
 end
 

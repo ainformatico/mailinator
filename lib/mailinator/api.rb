@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'net/http'
 require 'json'
 
@@ -9,6 +11,7 @@ module Mailinator
 
     def get(url, params = {})
       response = request(url, params)
+
       handle_response(response)
     end
 
@@ -21,12 +24,14 @@ module Mailinator
     def request(url, params)
       uri = generate_url(url)
       uri.query = generate_params(params)
+
       perform_request(uri)
     end
 
     def perform_request(uri)
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = (uri.scheme == 'https')
+
       http.get(uri.request_uri)
     end
 

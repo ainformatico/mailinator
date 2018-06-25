@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/ainformatico/mailinator.svg)](https://travis-ci.org/ainformatico/mailinator)
 [![Code Climate](https://codeclimate.com/github/ainformatico/mailinator/badges/gpa.svg)](https://codeclimate.com/github/ainformatico/mailinator)
-[![Coverage Status](https://coveralls.io/repos/github/ainformatico/mailinator/badge.svg?branch=master)](https://coveralls.io/github/ainformatico/mailinator?branch=master)
 
 # Mailinator
 
@@ -40,24 +39,27 @@ Access to an email
 email = Mailinator::Email.get('email-abcd1234')
 ```
 
+Access to a private email
+
+```ruby
+email = Mailinator::Email.get('email-abcd1234', private_domain: true)
+```
+
 Now you have access to some methods:
 
-* `email.id`
-* `email.subject`
-* `email.body`
-* `email.body_html`
-* `email.read?`
-* `email.inbox_fetches_left`
-* `email.email_fetches_left`
-* `email.sender`
-* `email.reply_to`
-* `email.from`
-* `email.ip`
-* `email.received`
+* `email.from_full`
 * `email.date`
+* `email.received`
+* `email.from`
+* `email.to`
+* `email.subject`
+* `email.request_id`
+* `email.body`
+* `email.body_base_64`
+* `email.orig_from`
+* `email.id`
 * `email.time`
-* `email.forwards_left`
-* `email.original`, original request
+* `email.seconds_ago`
 
 ### Inbox
 
@@ -87,6 +89,13 @@ To delete an `Email` you need:
 ```ruby
 inbox.messages.first.delete
 ```
+
+Access to a private inbox
+```ruby
+inbox = Mailinator::Inbox.get('inbox-abcd1234', private_domain: true)
+```
+
+The 'download' and 'delete' work the same with private domain.
 
 ## Contributing
 

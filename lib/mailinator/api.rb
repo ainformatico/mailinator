@@ -4,7 +4,6 @@ require 'net/http'
 require 'json'
 
 module Mailinator
-
   class Api
     class NotFound < StandardError; end
     class RequestError < StandardError; end

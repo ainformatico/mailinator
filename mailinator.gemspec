@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version       = Mailinator::VERSION
   spec.authors       = ['Alejandro Dev.']
   spec.email         = ['aeinformatico@gmail.com']
-  spec.summary       = %q{Mailinator REST API wrapper}
+  spec.summary       = 'Mailinator REST API wrapper'
   spec.homepage      = 'https://github.com/ainformatico/mailinator'
   spec.license       = 'MIT'
 

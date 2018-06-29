@@ -5,7 +5,6 @@ require 'fakeweb'
 def fixture_file(filename)
   return '' if filename == ''
   file_path = File.join(__dir__, '../', 'fixtures/', filename)
-  
   File.read(file_path)
 end
 

@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Mailinator::Models::Base do
 
-  let(:data) { {custom: :custom} }
+  let(:data) { { custom: :custom } }
 
   describe '#transform_data ' do
     let(:klass) { CustomModel.new(data) }

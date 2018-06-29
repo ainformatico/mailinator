@@ -50,7 +50,6 @@ describe Mailinator::Email do
     let(:response) { subject.delete('abcd1234') }
 
     it 'deletes an email' do
-      response = Mailinator::Email.delete('abcd1234')
       expect(response).to eq('status' => 'ok')
     end
   end

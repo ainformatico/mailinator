@@ -1,9 +1,13 @@
+# frozen_string_literal: true
+
 module Mailinator
   class Inbox
     class << self
-      def get(to)
+      def get(to, opts = {})
         api = Api.new
-        data = api.get('inbox', to: to)
+        params = opts.merge(to: to)
+        data = api.get('inbox', params)
+
         populate(data)
       end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'date'
 
 module Mailinator
@@ -5,30 +7,20 @@ module Mailinator
     class Email < Base
       def transform_data
         {
-          id: @data['data']['id'],
-          subject: @data['data']['subject'],
-          body: @data['data']['parts'].first['body'],
-          body_html: retrieve_body_html,
-          inbox_fetches_left: @data['apiInboxFetchesLeft'],
-          email_fetches_left: @data['apiEmailFetchesLeft'],
-          forwards_left: @data['forwardsLeft'],
-          sender: @data['data']['headers']['sender'],
-          from: @data['data']['from'],
+          from_full: @data['data']['fromfull'],
           date: DateTime.parse(@data['data']['headers']['date']),
-          time: @data['data']['time'],
-          ip: @data['data']['ip'],
-          to: @data['data']['headers']['to'],
-          reply_to: @data['data']['headers']['reply-to'],
           received: @data['data']['headers']['received'],
-          read?: @data['data']['been_read']
+          from: @data['data']['headers']['from'],
+          to: @data['data']['headers']['to'],
+          subject: @data['data']['subject'],
+          request_id: @data['data']['requestId'],
+          body: @data['data']['parts'].first['body'],
+          body_base_64: @data['data']['parts'].last['body'],
+          orig_from: @data['data']['origfrom'],
+          id: @data['data']['id'],
+          time: @data['data']['time'],
+          seconds_ago: @data['data']['seconds_ago']
         }
-      end
-
-      private
-
-      def retrieve_body_html
-        html = @data['data']['parts'][1] || {}
-        html['body']
       end
     end
   end

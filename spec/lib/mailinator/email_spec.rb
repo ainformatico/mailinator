@@ -17,23 +17,21 @@ describe Mailinator::Email do
       let(:message) { subject.get('abcd1234') }
 
       it 'gets the email' do
-        expect(message.id).to eq('1419696967-44152505-recipient')
-        expect(message.subject).to eq('This is a subject')
-        expect(message.body).to eq(body)
-        expect(message.body_html).to include("<p>#{body}</p>")
-        expect(message.read?).to_not be
-        expect(message.inbox_fetches_left).to eq(696)
-        expect(message.email_fetches_left).to eq(10)
-        expect(message.sender).to eq('example@example.net')
-        expect(message.reply_to).to eq('example@example.net')
-        expect(message.from).to eq('Sender')
-        expect(message.ip).to eq('127.0.0.1')
-        expect(message.received)
-          .to match(a_string_matching('from 127-0-0-1.dynamic-ip.example.net'))
+        message = Mailinator::Email.get('abcd1234')
+        expect(message.from_full).to eq('example@example.net')
         expect(message.date).to be_a(DateTime)
-        expect(message.time).to eq(1_419_696_967_076)
-        expect(message.forwards_left).to eq(10)
-        expect(message.original).to be_a(Hash)
+        expect(message.received)
+        .to include('from bmta1.example.com([9.9.9.9]) by mail.mailinator.com with SMTP (Postfix) for receipient@example.com; Fri, 11 May 2018 20:55:36 +0000 (UTC)')
+        expect(message.from).to eq('Sender <sender@example.com>')
+        expect(message.to).to eq('<recipient@mailinator.com>')
+        expect(message.subject).to eq('This is a Subject')
+        expect(message.request_id).to eq('638363')
+        expect(message.body).to include('<p>This is a body</p>')
+        expect(message.body_base_64).to include('This is a BASE64 body JVBERi0xLjUKJe')
+        expect(message.orig_from).to eq('Sender <sender@example.com>')
+        expect(message.id).to eq('1419696967-44152505-recipient')
+        expect(message.time).to eq(1_526_072_140_000)
+        expect(message.seconds_ago).to eq(15_258)
       end
     end
 

@@ -3,6 +3,7 @@
 require 'spec_helper'
 
 describe Mailinator::Models::Base do
+
   let(:data) { { custom: :custom } }
 
   describe '#transform_data ' do

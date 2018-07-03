@@ -1,5 +1,27 @@
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Date: Sun, 28 Dec 2014 16:26:18 GMT
+Date: Mon, 14 May 2018 16:26:18 GMT
 
-{"messages":[{"seconds_ago":87011,"id":"1419696967-44152505-recipient","to":"recipient@mailinator.com","time":1419696967076,"subject":"First subject","fromfull":"sender@example.org","been_read":false,"from":"Sender name","ip":"127.0.0.1"},{"seconds_ago":73130,"id":"1419710848-46252175-recipient","to":"recipient@mailinator.com","time":1419710848789,"subject":"Second subject","fromfull":"sender@example.org","been_read":false,"from":"Another sender name","ip":"127.0.0.2"}]}
+{
+	"messages": [{
+		"seconds_ago": 87011,
+		"id": "1419696967-44152505-recipient",
+		"to": "recipient@mailinator.com",
+		"time": 1419696967076,
+		"subject": "First subject",
+		"fromfull": "sender@example.org",
+		"been_read": false,
+		"from": "Sender name",
+		"ip": "127.0.0.1"
+	}, {
+		"seconds_ago": 73130,
+		"id": "1419710848-46252175-recipient",
+		"to": "recipient@mailinator.com",
+		"time": 1419710848789,
+		"subject": "Second subject",
+		"fromfull": "sender@example.org",
+		"been_read": false,
+		"from": "Another sender name",
+		"ip": "127.0.0.2"
+	}]
+}

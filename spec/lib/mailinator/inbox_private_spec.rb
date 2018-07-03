@@ -13,7 +13,7 @@ describe Mailinator::Inbox do
     end
   end
 
-  it 'should get an private domain inbox' do
+  it 'gets a private domain inbox' do
     expect(inbox_private.messages).to be_a(Array)
     expect(inbox_private.original).to be_a(Hash)
     expect(inbox_private.messages.first).to \
@@ -22,7 +22,7 @@ describe Mailinator::Inbox do
       include(id: '1556696970-44152699-recipient')
   end
 
-  it 'should #download a private domain email' do
+  it '#download a private domain email' do
     expect(inbox_private.messages.first.download(private_domain: true)).to \
       be_a(Mailinator::Models::Email)
     expect(inbox_private.messages.first.download(private_domain: true)).to \
@@ -33,7 +33,7 @@ describe Mailinator::Inbox do
     end
   end
 
-  it 'should #delete a private domain email' do
+  it '#delete a private domain email' do
     expect(inbox_private.messages.first.delete).to eq('status' => 'ok')
   end
 end

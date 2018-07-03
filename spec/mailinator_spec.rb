@@ -23,7 +23,7 @@ describe Mailinator do
     context 'when using the short version' do
       before { subject.config.token = token }
 
-      it 'should configure the token, short version' do
+      it 'configures the token, short version' do
         expect(subject.config.token).to eq token
       end
     end

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Mailinator::Inbox do
-  let(:inbox_private) {
+  let(:inbox_private) do
     Mailinator::Inbox.get('abcd1234', private_domain: true)
-  }
+  end
 
   before do
     Mailinator.configure do |config|

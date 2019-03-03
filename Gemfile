@@ -11,7 +11,7 @@ group :development do
   gem 'guard', '~> 2.14.2'
   gem 'guard-rspec', '~> 4.7.3'
   gem 'listen', '~> 3.1.5'
-  gem 'rspec', '~> 3.7.0'
+  gem 'rspec', '~> 3.8.0'
   gem 'rubocop', '~> 0.57.1'
 end
 

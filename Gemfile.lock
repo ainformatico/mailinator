@@ -52,7 +52,7 @@ GEM
     parser (2.5.1.0)
       ast (~> 2.4.0)
     powerpack (0.1.2)
-    pry (0.11.3)
+    pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     pry-byebug (3.6.0)
@@ -109,7 +109,7 @@ DEPENDENCIES
   guard-rspec (~> 4.7.3)
   listen (~> 3.1.5)
   mailinator!
-  pry (~> 0.11.3)
+  pry (~> 0.12.2)
   pry-byebug (~> 3.6.0)
   rake (~> 12.3.1)
   rspec (~> 3.8.0)

@@ -8,7 +8,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    byebug (11.0.0)
+    byebug (11.1.1)
     coderay (1.1.2)
     coveralls (0.8.22)
       json (>= 1.8, < 3)
@@ -55,7 +55,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    pry-byebug (3.7.0)
+    pry-byebug (3.8.0)
       byebug (~> 11.0)
       pry (~> 0.10)
     psych (3.1.0)
@@ -112,7 +112,7 @@ DEPENDENCIES
   listen (~> 3.1.5)
   mailinator!
   pry (~> 0.12.2)
-  pry-byebug (~> 3.7.0)
+  pry-byebug (~> 3.8.0)
   rake (~> 12.3.1)
   rspec (~> 3.8.0)
   rubocop (~> 0.65.0)

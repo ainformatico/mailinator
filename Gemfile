@@ -8,7 +8,7 @@ gemspec
 group :development do
   gem 'coveralls', require: false
   gem 'fakeweb', '~> 1.3.0'
-  gem 'guard', '~> 2.15.0'
+  gem 'guard', '~> 2.17.0'
   gem 'guard-rspec', '~> 4.7.3'
   gem 'listen', '~> 3.1.5'
   gem 'rspec', '~> 3.8.0'
